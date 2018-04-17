@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4224619873649668}
+  - component: {fileID: 114685593827863744}
   m_Layer: 0
   m_Name: Dummy
   m_TagString: Untagged
@@ -2543,6 +2544,19 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114685593827863744
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1141030175367346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae8ccf92e7724742996af8dc892aa57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theManager: {fileID: 114730483994470200, guid: 2c32b747b57330e4db93bb77ee07160a,
+    type: 2}
 --- !u!114 &114761924059809716
 MonoBehaviour:
   m_ObjectHideFlags: 1

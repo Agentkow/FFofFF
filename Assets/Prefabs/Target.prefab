@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 64260168951145246}
   - component: {fileID: 54267352859437396}
   - component: {fileID: 138184989004338950}
+  - component: {fileID: 114868619409410620}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -237,9 +238,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Convex: 0
-  m_CookingOptions: 14
+  m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
 --- !u!65 &65628826609125814
@@ -5820,6 +5821,19 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114868619409410620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1473378324082782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d228f43edb39a9488665b98739d0a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theManager: {fileID: 114730483994470200, guid: 2c32b747b57330e4db93bb77ee07160a,
+    type: 2}
 --- !u!114 &114874676031967398
 MonoBehaviour:
   m_ObjectHideFlags: 1
