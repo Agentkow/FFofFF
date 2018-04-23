@@ -9,14 +9,14 @@ public class TargetCount : MonoBehaviour {
     [SerializeField]
     private Manager theManager;
 
-    public void Awake()
+    public void Start()
     {
         theManager.targetGoal++;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!hit)
+        if (!hit && collision.gameObject.tag == "Player")
         {
             theManager.targetGoal--;
             
