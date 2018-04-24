@@ -18,7 +18,7 @@ public class LoadingScene : MonoBehaviour
     }
     private IEnumerator LoadSceneAsync(string sceneName)
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
 
         var task = SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive);
 
@@ -28,7 +28,7 @@ public class LoadingScene : MonoBehaviour
             yield return null;
         }
         progressBarSlider.value = 1;
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
         SceneManager.UnloadSceneAsync("LoadingScreen");
         
     }

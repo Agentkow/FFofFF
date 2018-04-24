@@ -64,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1473378324082782}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: -40.36, y: 1.58, z: 7.94}
+  m_LocalPosition: {x: -45.97215, y: -154.7554, z: 64.77047}
   m_LocalScale: {x: 2.446681, y: 2.4466808, z: 2.4466808}
   m_Children:
   - {fileID: 4741958036595634}
@@ -206,7 +206,7 @@ HingeJoint:
   m_Anchor: {x: -2.65, y: 0.29, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -3.475939, y: 0.017057288, z: -0.018316677}
+  m_ConnectedAnchor: {x: -3.4759398, y: 0.017057288, z: -0.018316677}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -217,10 +217,10 @@ HingeJoint:
     targetVelocity: 0
     force: 0
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_Limits:
-    min: 0
-    max: 0
+    min: -120
+    max: 120
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -239,9 +239,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Convex: 0
-  m_CookingOptions: 14
+  m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
 --- !u!65 &65165237404572494
@@ -292,8 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hit: 0
-  theManager: {fileID: 114730483994470200, guid: 2c32b747b57330e4db93bb77ee07160a,
-    type: 2}
+  theManager: {fileID: 0}
 --- !u!114 &114714186074492680
 MonoBehaviour:
   m_ObjectHideFlags: 1

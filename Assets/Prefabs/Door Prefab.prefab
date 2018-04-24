@@ -89,15 +89,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1468111320830034}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.864334, y: 1.2847118, z: -17.482391}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -31.506111, y: -6.534363, z: -9.348679}
+  m_LocalScale: {x: 1.4120009, y: 1.4120007, z: 1.4120011}
   m_Children:
   - {fileID: 4778257357479886}
   - {fileID: 4199243057468346}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4778257357479886
 Transform:
   m_ObjectHideFlags: 1
@@ -233,7 +233,7 @@ HingeJoint:
   m_Anchor: {x: 2, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 3.02952, y: 0.07004193, z: 0.5269223}
+  m_ConnectedAnchor: {x: 3.029521, y: 0.07004315, z: 0.5269304}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -251,8 +251,8 @@ HingeJoint:
     bounciness: 0.5
     bounceMinVelocity: 0.2
     contactDistance: 0
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
+  m_BreakForce: 10
+  m_BreakTorque: 10
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
   m_MassScale: 1
@@ -266,9 +266,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Convex: 0
-  m_CookingOptions: 14
+  m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
 --- !u!65 &65439712248941550
@@ -1179,9 +1179,17 @@ MonoBehaviour:
     areaError: 15
   asset_guid: 
   dontDestroyMeshOnDelete: 0
-  m_selectedFaces: 
-  m_SelectedEdges: []
-  m_selectedTriangles: 
+  m_selectedFaces: 02000000
+  m_SelectedEdges:
+  - x: 8
+    y: 9
+  - x: 10
+    y: 8
+  - x: 9
+    y: 11
+  - x: 11
+    y: 10
+  m_selectedTriangles: 08000000090000000a000000090000000b0000000a000000
 --- !u!138 &138125626110119742
 FixedJoint:
   m_ObjectHideFlags: 1
