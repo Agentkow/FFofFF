@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TargetCount : MonoBehaviour {
-
+    [SerializeField]
     private bool hit = false;
 
     [SerializeField]
     private Manager theManager;
 
-    public void Awake()
+    public void Start()
     {
         theManager.targetGoal++;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (!hit)
+        if (!hit && other.gameObject.tag == "Player")
         {
             theManager.targetGoal--;
-            
+            hit = true;
         }
-        hit = true;
+        
     }
 }

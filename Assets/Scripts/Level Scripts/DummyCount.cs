@@ -3,25 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DummyCount : MonoBehaviour {
-
+    [SerializeField]
     private bool knockedOver = false;
 
     [SerializeField]
     private Manager theManager;
 
 	// Use this for initialization
-	public void Awake()
+	public void Start()
     {
         theManager.dummyGoal++;
 	}
-
-    private void OnCollisionEnter(Collision collision)
+   
+    private void OnTriggerEnter(Collider other)
     {
-        if (!knockedOver)
+        if (!knockedOver && other.gameObject.tag == "Player")
         {
             theManager.dummyGoal--;
-            
+            knockedOver = true;
         }
-        knockedOver = true;
+        
     }
 }
