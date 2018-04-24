@@ -16,7 +16,6 @@ public class Manager : MonoBehaviour
     private void Awake()
     {
         targetGoal = 0;
-        dummyGoal = 0;
     }
 
     // Update is called once per frame

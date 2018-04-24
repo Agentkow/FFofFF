@@ -20,8 +20,8 @@ public class DummyCount : MonoBehaviour {
         if (!knockedOver && other.gameObject.tag == "Player")
         {
             theManager.dummyGoal--;
-            
+            knockedOver = true;
         }
-        knockedOver = true;
+        
     }
 }

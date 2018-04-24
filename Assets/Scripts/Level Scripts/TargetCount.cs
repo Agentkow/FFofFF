@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TargetCount : MonoBehaviour {
-
+    [SerializeField]
     private bool hit = false;
 
     [SerializeField]
@@ -14,13 +14,13 @@ public class TargetCount : MonoBehaviour {
         theManager.targetGoal++;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (!hit && collision.gameObject.tag == "Player")
+        if (!hit && other.gameObject.tag == "Player")
         {
             theManager.targetGoal--;
-            
+            hit = true;
         }
-        hit = true;
+        
     }
 }
