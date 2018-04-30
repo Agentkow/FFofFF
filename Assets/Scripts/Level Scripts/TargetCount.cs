@@ -9,9 +9,13 @@ public class TargetCount : MonoBehaviour {
     [SerializeField]
     private Manager theManager;
 
+    private ParticleSystem gongShine;
+
     public void Start()
     {
         theManager.targetGoal++;
+        gongShine = GetComponent<ParticleSystem>();
+        gongShine.Stop();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -20,6 +24,7 @@ public class TargetCount : MonoBehaviour {
         {
             theManager.targetGoal--;
             hit = true;
+            gongShine.Play();
         }
         
     }

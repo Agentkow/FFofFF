@@ -9,10 +9,13 @@ public class DummyCount : MonoBehaviour {
     [SerializeField]
     private Manager theManager;
 
+    private Light notice;
+
 	// Use this for initialization
 	public void Start()
     {
         theManager.dummyGoal++;
+        notice = GetComponent<Light>();
 	}
    
     private void OnTriggerEnter(Collider other)
@@ -21,6 +24,7 @@ public class DummyCount : MonoBehaviour {
         {
             theManager.dummyGoal--;
             knockedOver = true;
+            notice.enabled = false;
         }
         
     }

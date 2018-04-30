@@ -31,6 +31,14 @@ public class Kick : MonoBehaviour
         kickName = "Fire1";
     }
 
+    void Update()
+    {
+        if (rigBody.velocity.magnitude >= kickForce)
+        {
+            rigBody.velocity = rigBody.transform.forward * kickForce;
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate () 
 	{
@@ -50,7 +58,7 @@ public class Kick : MonoBehaviour
 
     private IEnumerator KickEffect()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         kickParticles.Stop();
     }
     
