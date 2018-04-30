@@ -17,13 +17,13 @@ public class Kick : MonoBehaviour
     private bool canKick;
 
     [SerializeField]
-    private ParticleEmitter kickParticles;
+    private ParticleSystem kickParticles;
 
     private void Awake()
     {
         rigBody = GetComponent<Rigidbody>();
         playerTransform = GetComponent<Transform>();
-        kickParticles.enabled = false;
+        kickParticles.Stop();
     }
 
     private void Start()
@@ -44,11 +44,14 @@ public class Kick : MonoBehaviour
     void KickLaunch()
     {
         rigBody.AddForce(kickForce * cameraTransform.forward + transform.up);
+        kickParticles.Play();
+        StartCoroutine(KickEffect());
     }
 
     private IEnumerator KickEffect()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
+        kickParticles.Stop();
     }
     
 }

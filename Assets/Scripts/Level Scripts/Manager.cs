@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour 
 {
@@ -23,5 +24,17 @@ public class Manager : MonoBehaviour
 	{
         dummyCount.text = "Dummies Left: " + dummyGoal;
         targetCount.text = "Targets Left: " + targetGoal;
+
+        if (dummyGoal == 0 && targetGoal == 0)
+        {
+
+            StartCoroutine(GoToMenu());
+        }
 	}
+
+    IEnumerator GoToMenu()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene("Menu");
+    }
 }
