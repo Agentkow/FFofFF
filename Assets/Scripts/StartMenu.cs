@@ -5,9 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour 
 {
-
+    
     [SerializeField]
     private string sceneToLoad;
+
+
+    private void Start()
+    {
+        Cursor.lockState= CursorLockMode.None;  
+    }
 
     public void LoadButtonOnClick()
     {
@@ -16,6 +22,6 @@ public class StartMenu : MonoBehaviour
 
     public void QuitButton()
     {
-
+        Application.Quit();
     }
 }
