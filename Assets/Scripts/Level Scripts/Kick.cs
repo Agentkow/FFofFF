@@ -19,6 +19,9 @@ public class Kick : MonoBehaviour
     [SerializeField]
     private ParticleSystem kickParticles;
 
+    [SerializeField]
+    private AudioSource kickSound;
+
     private void Awake()
     {
         rigBody = GetComponent<Rigidbody>();
@@ -54,10 +57,13 @@ public class Kick : MonoBehaviour
         rigBody.AddForce(kickForce * cameraTransform.forward + transform.up);
         kickParticles.Play();
         StartCoroutine(KickEffect());
+        kickSound.Play();
+
     }
 
     private IEnumerator KickEffect()
     {
+        
         yield return new WaitForSeconds(1.5f);
         kickParticles.Stop();
     }

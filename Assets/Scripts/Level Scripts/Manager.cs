@@ -13,10 +13,15 @@ public class Manager : MonoBehaviour
     private Text targetCount;
     [SerializeField]
     private Text dummyCount;
+    [SerializeField]
+    private GameObject crossHair;
+    [SerializeField]
+    private Text win;
 
     private void Awake()
     {
         targetGoal = 0;
+        win.text = "";
     }
 
     // Update is called once per frame
@@ -27,7 +32,8 @@ public class Manager : MonoBehaviour
 
         if (dummyGoal == 0 && targetGoal == 0)
         {
-
+            crossHair.SetActive(false);
+            win.text = "You are true Master";
             StartCoroutine(GoToMenu());
         }
 	}

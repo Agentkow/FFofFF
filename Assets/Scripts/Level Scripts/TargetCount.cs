@@ -11,6 +11,9 @@ public class TargetCount : MonoBehaviour {
 
     private ParticleSystem gongShine;
 
+    [SerializeField]
+    private AudioSource gongSound;
+
     public void Start()
     {
         theManager.targetGoal++;
@@ -25,6 +28,7 @@ public class TargetCount : MonoBehaviour {
             theManager.targetGoal--;
             hit = true;
             gongShine.Play();
+            gongSound.Play();
         }
         
     }
